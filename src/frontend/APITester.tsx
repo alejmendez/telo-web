@@ -24,7 +24,7 @@ export function APITester() {
   return (
     <div className="api-tester">
       <form onSubmit={testEndpoint} className="endpoint-row">
-        <select name="method" className="method">
+        <select name="method" className="method bg-gray-800 text-white">
           <option value="GET">GET</option>
           <option value="PUT">PUT</option>
         </select>
