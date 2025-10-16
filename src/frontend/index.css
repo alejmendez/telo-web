@@ -182,6 +182,139 @@ code {
 .response-area::placeholder {
   color: rgba(251, 240, 223, 0.4);
 }
+.page {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #fbf0df;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  background: #1a1a1a;
+  border: 2px solid #fbf0df;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  background: #fbf0df;
+  color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(251, 240, 223, 0.3);
+}
+
+.info-card {
+  background: #1a1a1a;
+  border: 2px solid #fbf0df;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.info-card h2 {
+  margin-top: 0;
+  color: #fbf0df;
+  font-size: 1.5em;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-card li {
+  padding: 0.5rem 0;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.info-card strong {
+  color: #fbf0df;
+}
+
+/* Layout con navegación persistente */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.header {
+  background: #1a1a1a;
+  border-bottom: 2px solid #fbf0df;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.main-nav {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.nav-item {
+  color: #fbf0df;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.nav-item:hover {
+  background: rgba(251, 240, 223, 0.1);
+  transform: translateY(-1px);
+}
+
+.nav-item.active {
+  background: #fbf0df;
+  color: #1a1a1a;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer {
+  background: #1a1a1a;
+  border-top: 2px solid #fbf0df;
+  padding: 1rem;
+  text-align: center;
+  color: rgba(251, 240, 223, 0.6);
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
 @media (prefers-reduced-motion) {
   *,
   ::before,
