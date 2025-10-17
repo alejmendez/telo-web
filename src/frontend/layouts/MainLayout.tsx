@@ -1,5 +1,7 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 
+import { FooterPage } from "../components/FooterPage";
+
 /**
  * Layout principal con navegación persistente
  * El componente <Outlet /> renderiza las rutas hijas
@@ -12,37 +14,9 @@ export function MainLayout() {
   };
 
   return (
-    <div className="layout">
-      <header className="header">
-        <nav className="main-nav">
-          <Link
-            to="/"
-            className={`nav-item ${isActive("/") ? "active" : ""}`}
-          >
-            Inicio
-          </Link>
-          <Link
-            to="/about"
-            className={`nav-item ${isActive("/about") ? "active" : ""}`}
-          >
-            Acerca de
-          </Link>
-          <Link
-            to="/api-test"
-            className={`nav-item ${isActive("/api-test") ? "active" : ""}`}
-          >
-            API Test
-          </Link>
-        </nav>
-      </header>
-
-      <main className="main-content">
-        <Outlet />
-      </main>
-
-      <footer className="footer">
-        <p>Bun + React + React Router © 2025</p>
-      </footer>
+    <div className="min-h-screen bg-gradient-to-b from-background to-accent/20">
+      <Outlet />
+      <FooterPage />
     </div>
   );
 }
