@@ -48,6 +48,8 @@
 }
 
 /* Dark theme */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 @variant dark {
   :root {
     --color-background: hsl(220 20% 12%);
