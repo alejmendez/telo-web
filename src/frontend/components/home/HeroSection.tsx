@@ -8,13 +8,12 @@ export function HeroSection() {
 
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-[var(--gradient-hero)] opacity-5" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 lg:space-y-8">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-              Tu hogar perfecto está a un{" "}
-              <span className="bg-gradient-to-r from-primary to-[hsl(210_95%_50%)] bg-clip-text text-transparent">
+              Tu hogar perfecto está a un
+              <span className="ms-3 bg-gradient-to-r from-primary to-[hsl(210_95%_50%)] bg-clip-text text-transparent">
                 click
               </span>
             </h1>
