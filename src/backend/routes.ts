@@ -1,11 +1,14 @@
-import index from "../frontend/index.html";
+import index from "../frontend/website/index.html";
+import backofficeIndex from "../frontend/backoffice/index.html";
 
 // Cache para archivos estáticos
 const robotsCache = await Bun.file("./src/backend/robots.txt").text();
-const faviconCache = await Bun.file("./src/frontend/assets/favicon.ico").bytes();
+const faviconCache = await Bun.file("./src/frontend/website/assets/favicon.ico").bytes();
 
 export const routes = {
   "/*": index,
+  "/backoffice": backofficeIndex,
+  "/backoffice/*": backofficeIndex,
   "/robots.txt": () => new Response(robotsCache, {
     headers: {
       "Content-Type": "text/plain",

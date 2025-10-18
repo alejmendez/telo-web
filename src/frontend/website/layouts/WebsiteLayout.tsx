@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 
-import { FooterPage } from "../components/website/FooterPage";
-import { ToggleDarkMode } from "../components/website/ToggleDarkMode";
+import { FooterPage } from "../components/FooterPage";
+import { ToggleDarkMode } from "../components/ToggleDarkMode";
 
 /**
  * Layout principal con navegación persistente
