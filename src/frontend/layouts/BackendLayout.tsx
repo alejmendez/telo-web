@@ -2,13 +2,13 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
 
-import { FooterPage } from "../components/FooterPage";
+import { FooterPage } from "../components/website/FooterPage";
 
 /**
  * Layout principal con navegación persistente
  * El componente <Outlet /> renderiza las rutas hijas
  */
-export function MainLayout() {
+export function BackendLayout() {
   const location = useLocation();
   const [isDarkMode, setIsDarkMode] = useState(false);
 

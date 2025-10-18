@@ -1,4 +1,4 @@
-import teloLogo from "../assets/telo-logo.png";
+import teloLogo from "../../assets/telo-logo.png";
 
 export function FooterPage() {
   return (

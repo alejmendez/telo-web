@@ -8,7 +8,7 @@
 
 import { createBrowserRouter } from "react-router-dom";
 import { Home, About, APITestPage, NotFound } from "./pages";
-import { MainLayout } from "./layouts/MainLayout";
+import { WebsiteLayout } from "./layouts/WebsiteLayout";
 
 // ============================================
 // EJEMPLO 1: Rutas sin Layout (más simple)
@@ -38,7 +38,7 @@ export const simpleRouter = createBrowserRouter([
 export const layoutRouter = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />,
+    element: <WebsiteLayout />,
     children: [
       {
         index: true, // Ruta por defecto del padre
@@ -74,7 +74,7 @@ function UserProfile() {
 export const dynamicRouter = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />,
+    element: <WebsiteLayout />,
     children: [
       { index: true, element: <Home /> },
       { path: "users/:userId", element: <UserProfile /> },
@@ -95,7 +95,7 @@ const LazyAbout = lazy(() => import("./pages/About"));
 export const lazyRouter = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />,
+    element: <WebsiteLayout />,
     children: [
       { index: true, element: <Home /> },
       {
@@ -130,7 +130,7 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
 export const protectedRouter = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />,
+    element: <WebsiteLayout />,
     children: [
       { path: "login", element: <Login /> },
       {
@@ -155,7 +155,7 @@ import { Navigate } from "react-router-dom";
 export const redirectRouter = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />,
+    element: <WebsiteLayout />,
     children: [
       { index: true, element: <Home /> },
       { path: "old-path", element: <Navigate to="/new-path" replace /> },
@@ -252,7 +252,7 @@ function CurrentRouteInfo() {
 export const nestedRouter = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />,
+    element: <WebsiteLayout />,
     children: [
       { index: true, element: <Home /> },
       {
